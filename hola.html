@@ -20,6 +20,7 @@
 
 <nav class="side-menu" id="side-menu">
     <a href="/index.html">Home</a>
+    <a href="/biografía.html">Biografía</a>
 </nav>
 
 
@@ -87,6 +88,9 @@
         .container {
             width: 80%;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+            gap: 16px; /* Espacio entre las columnas y filas */
         }
         .categories {
             display: flex;
@@ -99,10 +103,10 @@
             text-align: center;
         }
         .category img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
+            width: 80%;
+            height: auto; /* Mantener la proporción de la imagen */
         }
+
         .category h3 {
             margin: 10px 0;
             font-size: 1.2em;
@@ -115,6 +119,7 @@
             font-size: 1em;
             border-radius: 5px;
             cursor: pointer;
+            margin-top: 8px; /* Espacio arriba del botón */
         }
         .category button:hover {
             background-color: #0056b3;
@@ -123,28 +128,30 @@
 </head>
 <body>
     <div class="container">
-        <div class="categories">
-            <div class="category">
-                <img src="/ILUSTRACIÓN.png" alt="Categoría A">
-                <h5>ILUSTRACIONES</h5> 
-                <button>Ingresar</button>
-            </div>
-            <div class="category">
-                <img src="/acuarela 12.jpeg" alt="Categoría B"> 
-                <h5>ACUARELAS</h5>
-                <button>Ingresar</button>
-            </div>
-            <div class="category">
-                <img src="/NATURALEZA.png" alt="Categoría C" height=100%>
-                <h5>NATURALEZA</h5>
-                <button>Ingresar</button>
-            </div>
-            <div class="category">
-                <img src="/NATURALEZA.png" alt="Categoría C" height=100%>
-                <h5>PROCESOS</h5>
-                <button>Ingresar</button>
+        <div class="category">
+            <img src="/acuarela 12.jpeg" alt="Categoría A"> 
+            <h5>ACUARELAS</h5>
+            <a href="acuarelas.html" class="button"><button>Ingresar</button></a>
         </div>
+        <div class="category">
+            <img src="/NATURALEZA.png" alt="Categoría B" height="100%">
+            <h5>NATURALEZA</h5>
+            <a href="naturaleza.html" class="button"><button>Ingresar</button></a>
+        </div>
+        <div class="category">
+            <img src="/ILUSTRACIÓN.png" alt="Categoría C" height="100%"> 
+            <h5>ILUSTRACIONES</h5>
+            <a href="ilustraciones.html" class="button"><button>Ingresar</button></a>
+        </div>
+        <div class="category">
+            <img src="/procesos  (5).jpeg" alt="Categoría C" height="100%"> 
+            <h5>PROCESOS</h5>
+            <a href="procesos.html" class="button"><button>Ingresar</button></a>
+        </div>
+       
+        <!-- Puedes agregar más categorías aquí -->
     </div>
+    
 </body>
 </html>
 
